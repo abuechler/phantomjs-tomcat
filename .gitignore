@@ -1,0 +1,15 @@
+gen/
+node_modules/
+bower_components/
+.idea/
+WebContent
+.DS_Store
+.classpath
+.metadata
+.project
+.settings
+*~
+*.zip
+target
+.springBeans
+.hg
