@@ -15,12 +15,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class ScreenShotController {
 
-	@Autowired
-	PhantomJSDriver webDriver;
+    @Autowired
+    PhantomJSDriver webDriver;
 
-	@RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.IMAGE_PNG_VALUE)
-	public @ResponseBody byte[] takeScreenShot(@RequestParam(defaultValue="http://www.google.com") String url) throws IOException {
-		webDriver.get(url);
-		return webDriver.getScreenshotAs(OutputType.BYTES);
-	}
+    @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.IMAGE_PNG_VALUE)
+    public @ResponseBody byte[] takeScreenShot(@RequestParam(defaultValue = "http://www.google.com") String url)
+            throws IOException {
+        webDriver.get(url);
+        return webDriver.getScreenshotAs(OutputType.BYTES);
+    }
 }
